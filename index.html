@@ -24,17 +24,75 @@
       </div>
       <div class="right-panel">
         <div class="description">
-          <h3 id="title-first">
+          <h3 id="description-text">
             This form is designed for entering your information to facilitate
-            interaction with our website.
-          </h3>
-          <h3 id="title-second">
-            Please do not enter <i>personal information</i> into the form
+            interaction with our website. <br />
+            <br />
+            Please do not enter <em>personal information</em> into the form
             fields, this form is intended as an example!
           </h3>
+          <button id="theme-btn">CHANGE THEME</button>
         </div>
-        <div class="form-container"></div>
-        <div class="submit-container"></div>
+        <div class="form-container">
+          <form
+            class="myForm"
+            id="myForm"
+            action="https://httpbin.org/post"
+            method="post"
+            target="_blank"
+          >
+            <legend>Let's do this!</legend>
+
+            <div class="form-row">
+              <div class="form-input">
+                <label for="first-name">FIRST NAME</label>
+                <input type="text" id="first-name" name="first-name" />
+              </div>
+              <div class="form-input">
+                <label for="last-name">LAST NAME</label>
+                <input type="text" id="last-name" name="last-name" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-input">
+                <label for="user-email">EMAIL</label>
+                <input type="email" name="user-email" id="user-email" />
+              </div>
+              <div class="form-input">
+                <label for="user-number">PHONE NUMBER</label>
+                <input type="tel" id="user-number" name="user-number" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-input">
+                <label for="user-password">*PASSWORD</label>
+                <input
+                  minlength="8"
+                  maxlength="20"
+                  type="password"
+                  name="user-password"
+                  id="user-password"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <label for="confirm-password">*CONFIRM PASSWORD</label>
+                <input
+                  minlength="8"
+                  maxlength="20"
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  required
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="submit-container">
+          <button type="submit" form="myForm">Create Account</button>
+          <p id="login-info">Already have an account? <a href="">Log in</a></p>
+        </div>
       </div>
     </div>
   </body>
