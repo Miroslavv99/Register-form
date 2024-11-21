@@ -3,15 +3,42 @@
     src: url('fonts/Norse-Bold.otf') format('opentype');
 }
 
+:root {
+    --bg-color: whitesmoke;
+    --form-bg: white;
+    --text-color: black;
+    --lable-color: rgb(84, 84, 84);
+    --input-bg: rgb(255, 255, 255);
+    --shadow: 3px 3px 6px grey;
+}
+
+.dark-theme {
+    --bg-color: rgb(44, 44, 44);
+    --text-color: white;
+    --form-bg: rgb(125, 125, 125);
+    --lable-color: rgb(255, 255, 255);
+    --input-bg: rgb(223, 223, 223);
+    --shadow: 3px 3px 6px rgb(37, 37, 37);
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
 .main {
     display: flex;
     flex-direction: row;
+    height: 100vh;
+    background-color: var(--bg-color)
+}
+
+#theme-btn {
+    position: relative;
+    left: 77%;
+    bottom: 40%;
 }
 
 .left-panel {
@@ -47,31 +74,122 @@ align-items: center;
 }
 
 .right-panel {
-margin: 0;
+display: flex;
+flex-direction: column;
 padding: 0;
 width: 100%;
 }
 
 .description {
-    margin: 0;
     width: 100%;
-    height: 35%;
-    background-color: whitesmoke;
+    height: 30%;
 }
 
-#title-first {
+#description-text {
     position: relative;
     top: 30%;
     left: 5%;
     width: 60%;
     font-family: Roboto, sans-serif;
+    color: var(--text-color);
 }
 
-#title-second {
-    position: relative;
-    top: 30%;
-    left: 5%;
-    width: 40%;
-    margin-top: 3%;
+
+
+.form-container {
+    width: 100%;
+    height: 40%;
+    background-color: var(--form-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.myForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 90%;
+    gap: 2rem;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+}
+
+legend {
+    color: var(--text-color);
     font-family: Roboto, sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+
+.form-row {
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    gap: 2rem;
+    
+}
+
+
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: Roboto, sans-serif;
+    font-weight: 800;
+    color: var(--lable-color);
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+input {
+    border-radius: 3px;
+    border: 1px solid rgb(158, 158, 158);
+    height: 25px;
+    width: 180px;
+    background-color: var(--input-bg)
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+.submit-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    gap: 20px;
+   
+}
+
+button {
+    height: 20%;
+    width: 20%;
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    background-color: rgb(76, 110, 52);
+    color: white;
+    font-weight: 600;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(76, 110, 52); ;
+}
+
+#login-info {
+    color: var(--text-color);
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    opacity: 0.8;
 }
